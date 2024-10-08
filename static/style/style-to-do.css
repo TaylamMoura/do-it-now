@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --cor-fundo:#A5B68D;
+    --cor-titulo:#EFBC9B;
+    --cor-to-do:#C5705D;
+    --cor-doing:#EEC759;
+    --cor-done:#79AC78;
+    --cor-fundo-div: #ebeae7;
+    --fonte-titulo-principal:font-family: "Abril Fatface", serif;
+    --fonte-titulo-secundario:font-family: "Lora", serif;
+    --fonte-texto:font-family: "Quicksand", sans-serif;
+}
+
+* {
+    background-color: var(--cor-fundo);
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    width: 300px;
+    border: 1px solid #000;
+    background-color: var(--cor-titulo);
+    text-align: center;
+    font-family: var(--fonte-titulo-principal);
+    font-size: 50px;
+}
+
+.to-do__titulo,
+.doing__titulo,
+.done__titulo{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    text-align:center;
+    font-family: var(--fonte-titulo-secundario);
+    font-size: 30px;
+}
+
+.to-do__titulo{
+    background-color: var(--cor-to-do);
+}
+
+.doing__titulo{
+    background-color: var(--cor-doing);
+}
+
+.done__titulo{
+    background-color: var(--cor-done);
+}
+
+.to-do,
+.doing,
+.done{
+    width: 300px;
+    border: 2px solid #000;
+    background-color: var(--cor-fundo-div);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.to-do{
+    position: relative;
+}
+
+ul {
+    list-style-type: circle;
+    background-color: var(--cor-fundo-div);
+}
+
+#to-do__lista li,
+#doing__lista li,
+#done__lista li {
+    background-color: var(--cor-fundo-div);
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+}
+
+.botao-add {
+    background-color: transparent;
+    border: none ;
+    padding: 10px;
+    overflow: hidden;
+    position: relative; 
+    left: 90%;
+    transform: translateX(-50%);
+    top: fixed;
+}
+
+button{
+    border: none;
+    padding: 0;  
+    background: none;
+}
+
+.botao-check img,
+.botao-add img {
+    width: 15px;
+    height: auto;
+    border: none;
+    margin-left: 10px;
+    background-color: whitesmoke;
+}
+
+.botao-add img:hover,
+.botao-check img:hover{
+    opacity: 0.4;
+}
+
+.input-texto{
+    width: 100%;
+    padding: 0px;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    color: #000;
+    border: none;
+}
+
+#input-tarefa {
+    background-color:whitesmoke;
+    margin-left: 10px;
+    margin-right: 50px;
+    margin-top: 8px;
+    border: 1px solid ;
+    padding: 5px;
+    border-radius: 10px;
+}
+footer {
+    font-family: var(--fonte-texto);
+    font-size: 20px;
+    margin-top: 80px;
+    color: rgb(102, 96, 96);
+}
